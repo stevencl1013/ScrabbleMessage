@@ -1,0 +1,33 @@
+name: ScrabbleMessage
+options:
+  bundleIdPrefix: com.scrabble
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  SWIFT_VERSION: "5.9"
+targets:
+  ScrabbleMessage:
+    type: application
+    platform: iOS
+    sources:
+      - ScrabbleMessage
+    info:
+      path: ScrabbleMessage/Info.plist
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.scrabble.ScrabbleMessage
+      GENERATE_INFOPLIST_FILE: NO
+    dependencies:
+      - target: MessagesExtension
+        embed: true
+  MessagesExtension:
+    type: app-extension.messages
+    platform: iOS
+    sources:
+      - MessagesExtension
+    info:
+      path: MessagesExtension/Info.plist
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.scrabble.ScrabbleMessage.MessagesExtension
+      GENERATE_INFOPLIST_FILE: NO
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"

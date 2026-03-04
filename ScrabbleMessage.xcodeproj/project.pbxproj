@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0415B678E89FC8BAB13BD487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBA27574971C2361856504D /* Assets.xcassets */; };
+		082C8A922A5AB2BC19AE45B2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06347A5F1F9A62927E5C315C /* GameView.swift */; };
+		0867C8F608C2BB10523B80BD /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DE06563E2973E201FA0FB /* ControlsView.swift */; };
+		0FC02A2E3BBE2C312DCCCEB5 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABD1B88BD0EA25C06936CB /* Square.swift */; };
+		13627ECA3830984A5350DB53 /* ScoreCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA070D82C4EBCFC547B080C /* ScoreCalculator.swift */; };
+		17D2981F32057DB29481A22A /* ExchangeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18021936CDE3BF9511E19352 /* ExchangeSheetView.swift */; };
+		2449E11C837ABD9FECB8CDEE /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1DE82B9D5948FC6D51418 /* Tile.swift */; };
+		25C5F4010C74CAF1805F694F /* WordFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C09FB227CD5A5FBEE4432 /* WordFinder.swift */; };
+		29BB6B7C46D40C0DFA9AFCEE /* twl06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16A55CDD301A0B1F382A15FF /* twl06.txt */; };
+		39C557AA9DA5F56DFA8887D8 /* TileBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAF1B5B6E89C487560E01C /* TileBag.swift */; };
+		44BD49A74ED35EEDA782AEDE /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D635E3FA74C9A8E90DA73F /* GameState.swift */; };
+		5139855B2EFF7FAAB79A5DCE /* MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ACE4996AD506D3BC6130E50A /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		62DA262697EE105C4249929B /* ScrabbleMessageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7129BCC205C2D883EC800F3 /* ScrabbleMessageApp.swift */; };
+		6657AEB162D65533F0782DB0 /* ScoreBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4715F7A1F16AAA65D492A51A /* ScoreBarView.swift */; };
+		67B6BCB937C9E0A50A46D671 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3E23C2E641C89566516E /* Board.swift */; };
+		70992B172EEBBEBEBECE2BBB /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A31389EBCC40C934C5001 /* BoardView.swift */; };
+		737BFF5C60898B2B727EDBAC /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568C7A78BEEEC477B463E9B /* MessageComposer.swift */; };
+		75C845FF5937A785F2DF404D /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E668C3D33743A57D226158 /* TileView.swift */; };
+		785524342D207E3C609CDADD /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6CC832911FC4F595B914A8 /* SquareView.swift */; };
+		7C73D98323685AE778B00021 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05D2B200FBC51D32890F3A2 /* Move.swift */; };
+		7E6FD88D02E582DC674A9E5D /* CompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37838C50A95461DA3C9AA66B /* CompactView.swift */; };
+		9422D612F02D0173FED6DBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3850183E656ADF76F2C8A0 /* Assets.xcassets */; };
+		979571A6576C680275E15852 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B410D9A215FA81C521658BD /* GameEngine.swift */; };
+		A2F1E6EB14C69305587657E9 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F18D684141B0E7AA4DFF28 /* MessagesViewController.swift */; };
+		B02F3470C39BB4084F8F973E /* MoveValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4F72D21EA324B5A3328CE /* MoveValidator.swift */; };
+		B5D68B211F8719401722CB5F /* RackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB566EBA699CC1680FAC231 /* RackView.swift */; };
+		B9B9EEB0D0C8D02BCDF670CE /* BlankPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534A3AC27F9231D4E58B9F5B /* BlankPickerView.swift */; };
+		D108D1B8F74AE0DAEDE92813 /* ScrabbleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71212FB7BAD6F5F2E88EEE74 /* ScrabbleConstants.swift */; };
+		F329B2D264622ACF83DD38CA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22E117B4AEF2CB7F2ABC /* Player.swift */; };
+		FC9DFAE67123A8041BB8F762 /* GameStateCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C41E8B595E9015D85FB2A2 /* GameStateCoder.swift */; };
+		FCB4D562A4A98A3427F0CB3F /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED22A25D24D20DFF29FA3C /* WordDictionary.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75E421FA8512932B9DE84793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C794C4D299E5D965073FA58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91F2DC5C7590A7AFACDD5D93;
+			remoteInfo = MessagesExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		543887ED5A35EA53C7BBF94F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5139855B2EFF7FAAB79A5DCE /* MessagesExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06347A5F1F9A62927E5C315C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		0CA070D82C4EBCFC547B080C /* ScoreCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCalculator.swift; sourceTree = "<group>"; };
+		13C41E8B595E9015D85FB2A2 /* GameStateCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateCoder.swift; sourceTree = "<group>"; };
+		16A55CDD301A0B1F382A15FF /* twl06.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = twl06.txt; sourceTree = "<group>"; };
+		16B4F72D21EA324B5A3328CE /* MoveValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveValidator.swift; sourceTree = "<group>"; };
+		18021936CDE3BF9511E19352 /* ExchangeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeSheetView.swift; sourceTree = "<group>"; };
+		1EC5D1492EAFAC2894FB351D /* ScrabbleMessage.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ScrabbleMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2568C7A78BEEEC477B463E9B /* MessageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
+		2A3850183E656ADF76F2C8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36F18D684141B0E7AA4DFF28 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		37838C50A95461DA3C9AA66B /* CompactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactView.swift; sourceTree = "<group>"; };
+		4715F7A1F16AAA65D492A51A /* ScoreBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBarView.swift; sourceTree = "<group>"; };
+		534A3AC27F9231D4E58B9F5B /* BlankPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankPickerView.swift; sourceTree = "<group>"; };
+		6E6CC832911FC4F595B914A8 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		71212FB7BAD6F5F2E88EEE74 /* ScrabbleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrabbleConstants.swift; sourceTree = "<group>"; };
+		783A3E23C2E641C89566516E /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		7B410D9A215FA81C521658BD /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		81ABD1B88BD0EA25C06936CB /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		8C4DE06563E2973E201FA0FB /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		8EBA27574971C2361856504D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98ED22A25D24D20DFF29FA3C /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
+		9BB566EBA699CC1680FAC231 /* RackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackView.swift; sourceTree = "<group>"; };
+		A05D2B200FBC51D32890F3A2 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		A2D635E3FA74C9A8E90DA73F /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		ACE4996AD506D3BC6130E50A /* MessagesExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8E6C5A4D9D6B78C655308E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B2E668C3D33743A57D226158 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		C86C09FB227CD5A5FBEE4432 /* WordFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFinder.swift; sourceTree = "<group>"; };
+		CA4D22E117B4AEF2CB7F2ABC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CF625E2B7F973CBCDA8E89C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D6CAF1B5B6E89C487560E01C /* TileBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileBag.swift; sourceTree = "<group>"; };
+		E80A31389EBCC40C934C5001 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		F7129BCC205C2D883EC800F3 /* ScrabbleMessageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrabbleMessageApp.swift; sourceTree = "<group>"; };
+		FAC1DE82B9D5948FC6D51418 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		26BC8F82678343FB704A9247 = {
+			isa = PBXGroup;
+			children = (
+				C918BBD709794EC7EB21D588 /* MessagesExtension */,
+				9FD3FFBDA74BE7B393D4489E /* ScrabbleMessage */,
+				C0277294B5A5A761281B4735 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		442650D2C3E45375ED77046C /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				13C41E8B595E9015D85FB2A2 /* GameStateCoder.swift */,
+				2568C7A78BEEEC477B463E9B /* MessageComposer.swift */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		71B2C79F44E58FA64C670200 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				534A3AC27F9231D4E58B9F5B /* BlankPickerView.swift */,
+				E80A31389EBCC40C934C5001 /* BoardView.swift */,
+				37838C50A95461DA3C9AA66B /* CompactView.swift */,
+				8C4DE06563E2973E201FA0FB /* ControlsView.swift */,
+				18021936CDE3BF9511E19352 /* ExchangeSheetView.swift */,
+				06347A5F1F9A62927E5C315C /* GameView.swift */,
+				9BB566EBA699CC1680FAC231 /* RackView.swift */,
+				4715F7A1F16AAA65D492A51A /* ScoreBarView.swift */,
+				6E6CC832911FC4F595B914A8 /* SquareView.swift */,
+				B2E668C3D33743A57D226158 /* TileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		72F03FBBC26EC63B637B885F /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				7B410D9A215FA81C521658BD /* GameEngine.swift */,
+				16B4F72D21EA324B5A3328CE /* MoveValidator.swift */,
+				0CA070D82C4EBCFC547B080C /* ScoreCalculator.swift */,
+				98ED22A25D24D20DFF29FA3C /* WordDictionary.swift */,
+				C86C09FB227CD5A5FBEE4432 /* WordFinder.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		7C6391D4D734325B6BD24699 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				783A3E23C2E641C89566516E /* Board.swift */,
+				A2D635E3FA74C9A8E90DA73F /* GameState.swift */,
+				A05D2B200FBC51D32890F3A2 /* Move.swift */,
+				CA4D22E117B4AEF2CB7F2ABC /* Player.swift */,
+				71212FB7BAD6F5F2E88EEE74 /* ScrabbleConstants.swift */,
+				81ABD1B88BD0EA25C06936CB /* Square.swift */,
+				FAC1DE82B9D5948FC6D51418 /* Tile.swift */,
+				D6CAF1B5B6E89C487560E01C /* TileBag.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E1296E751FF1B42789C97BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16A55CDD301A0B1F382A15FF /* twl06.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FD3FFBDA74BE7B393D4489E /* ScrabbleMessage */ = {
+			isa = PBXGroup;
+			children = (
+				8EBA27574971C2361856504D /* Assets.xcassets */,
+				CF625E2B7F973CBCDA8E89C2 /* Info.plist */,
+				F7129BCC205C2D883EC800F3 /* ScrabbleMessageApp.swift */,
+			);
+			path = ScrabbleMessage;
+			sourceTree = "<group>";
+		};
+		C0277294B5A5A761281B4735 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACE4996AD506D3BC6130E50A /* MessagesExtension.appex */,
+				1EC5D1492EAFAC2894FB351D /* ScrabbleMessage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C918BBD709794EC7EB21D588 /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2A3850183E656ADF76F2C8A0 /* Assets.xcassets */,
+				AF8E6C5A4D9D6B78C655308E /* Info.plist */,
+				36F18D684141B0E7AA4DFF28 /* MessagesViewController.swift */,
+				72F03FBBC26EC63B637B885F /* Logic */,
+				7C6391D4D734325B6BD24699 /* Models */,
+				8E1296E751FF1B42789C97BC /* Resources */,
+				442650D2C3E45375ED77046C /* Serialization */,
+				71B2C79F44E58FA64C670200 /* Views */,
+			);
+			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91F2DC5C7590A7AFACDD5D93 /* MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24DB229AB3E54FB81451AD49 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
+			buildPhases = (
+				2E4D61083B6B36F6954915C3 /* Sources */,
+				B1E1B9C71DDEEF249E06C601 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesExtension;
+			packageProductDependencies = (
+			);
+			productName = MessagesExtension;
+			productReference = ACE4996AD506D3BC6130E50A /* MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+		B0942B5F18B4D565C15EC06B /* ScrabbleMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7DECA98A94B9DC3A24C29F /* Build configuration list for PBXNativeTarget "ScrabbleMessage" */;
+			buildPhases = (
+				48807B375AD755E47E328C95 /* Sources */,
+				06C3B09B036C91E03E58DF2F /* Resources */,
+				543887ED5A35EA53C7BBF94F /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5401E00DC4FBDD71AB126D6 /* PBXTargetDependency */,
+			);
+			name = ScrabbleMessage;
+			packageProductDependencies = (
+			);
+			productName = ScrabbleMessage;
+			productReference = 1EC5D1492EAFAC2894FB351D /* ScrabbleMessage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C794C4D299E5D965073FA58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = F012B8FBCBC3A3AAAEE38232 /* Build configuration list for PBXProject "ScrabbleMessage" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 26BC8F82678343FB704A9247;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91F2DC5C7590A7AFACDD5D93 /* MessagesExtension */,
+				B0942B5F18B4D565C15EC06B /* ScrabbleMessage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06C3B09B036C91E03E58DF2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0415B678E89FC8BAB13BD487 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1E1B9C71DDEEF249E06C601 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9422D612F02D0173FED6DBB3 /* Assets.xcassets in Resources */,
+				29BB6B7C46D40C0DFA9AFCEE /* twl06.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E4D61083B6B36F6954915C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B9EEB0D0C8D02BCDF670CE /* BlankPickerView.swift in Sources */,
+				67B6BCB937C9E0A50A46D671 /* Board.swift in Sources */,
+				70992B172EEBBEBEBECE2BBB /* BoardView.swift in Sources */,
+				7E6FD88D02E582DC674A9E5D /* CompactView.swift in Sources */,
+				0867C8F608C2BB10523B80BD /* ControlsView.swift in Sources */,
+				17D2981F32057DB29481A22A /* ExchangeSheetView.swift in Sources */,
+				979571A6576C680275E15852 /* GameEngine.swift in Sources */,
+				44BD49A74ED35EEDA782AEDE /* GameState.swift in Sources */,
+				FC9DFAE67123A8041BB8F762 /* GameStateCoder.swift in Sources */,
+				082C8A922A5AB2BC19AE45B2 /* GameView.swift in Sources */,
+				737BFF5C60898B2B727EDBAC /* MessageComposer.swift in Sources */,
+				A2F1E6EB14C69305587657E9 /* MessagesViewController.swift in Sources */,
+				7C73D98323685AE778B00021 /* Move.swift in Sources */,
+				B02F3470C39BB4084F8F973E /* MoveValidator.swift in Sources */,
+				F329B2D264622ACF83DD38CA /* Player.swift in Sources */,
+				B5D68B211F8719401722CB5F /* RackView.swift in Sources */,
+				6657AEB162D65533F0782DB0 /* ScoreBarView.swift in Sources */,
+				13627ECA3830984A5350DB53 /* ScoreCalculator.swift in Sources */,
+				D108D1B8F74AE0DAEDE92813 /* ScrabbleConstants.swift in Sources */,
+				0FC02A2E3BBE2C312DCCCEB5 /* Square.swift in Sources */,
+				785524342D207E3C609CDADD /* SquareView.swift in Sources */,
+				2449E11C837ABD9FECB8CDEE /* Tile.swift in Sources */,
+				39C557AA9DA5F56DFA8887D8 /* TileBag.swift in Sources */,
+				75C845FF5937A785F2DF404D /* TileView.swift in Sources */,
+				FCB4D562A4A98A3427F0CB3F /* WordDictionary.swift in Sources */,
+				25C5F4010C74CAF1805F694F /* WordFinder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48807B375AD755E47E328C95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62DA262697EE105C4249929B /* ScrabbleMessageApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5401E00DC4FBDD71AB126D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91F2DC5C7590A7AFACDD5D93 /* MessagesExtension */;
+			targetProxy = 75E421FA8512932B9DE84793 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19C2280C6E1DC77A28EB112D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabble.ScrabbleMessage.MessagesExtension;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87F146BD2CE862541FA4C465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabble.ScrabbleMessage.MessagesExtension;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B6A14C8B90DBEBB22ED055B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ScrabbleMessage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabble.ScrabbleMessage;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA34AE24B23663A4C1B508A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		BCB289C57446C36FEDC58F09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		D416310CD8A11FB169A93955 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ScrabbleMessage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabble.ScrabbleMessage;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24DB229AB3E54FB81451AD49 /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C2280C6E1DC77A28EB112D /* Debug */,
+				87F146BD2CE862541FA4C465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F012B8FBCBC3A3AAAEE38232 /* Build configuration list for PBXProject "ScrabbleMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA34AE24B23663A4C1B508A2 /* Debug */,
+				BCB289C57446C36FEDC58F09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FA7DECA98A94B9DC3A24C29F /* Build configuration list for PBXNativeTarget "ScrabbleMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D416310CD8A11FB169A93955 /* Debug */,
+				B6A14C8B90DBEBB22ED055B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C794C4D299E5D965073FA58 /* Project object */;
+}
