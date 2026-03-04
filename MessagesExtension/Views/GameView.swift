@@ -55,14 +55,25 @@ struct GameView: View {
 
                     Spacer(minLength: 4)
 
-                    if engine.isLocalPlayerTurn && !engine.gameState.isGameOver {
-                        // Rack
+                    if engine.gameState.isGameOver {
+                        gameOverView
+                    } else {
+                        // Waiting indicator
+                        if !engine.isLocalPlayerTurn {
+                            Text("Waiting for opponent — plan your next move!")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                                .padding(.horizontal)
+                        }
+
+                        // Rack (always visible when game is active)
                         RackView(
-                            tiles: engine.currentPlayerRack,
-                            selectedTileID: selectedTile?.id,
+                            tiles: localPlayerRack,
+                            selectedTileID: engine.isLocalPlayerTurn ? selectedTile?.id : nil,
                             draggedTileID: rackDraggedTileID,
                             dropTargetIndex: rackDropTargetIndex,
                             onTileTap: { tile in
+                                guard engine.isLocalPlayerTurn else { return }
                                 if selectedTile?.id == tile.id {
                                     selectedTile = nil
                                 } else {
@@ -71,27 +82,33 @@ struct GameView: View {
                             }
                         )
 
-                        // Controls
-                        ControlsView(
-                            hasPendingTiles: !engine.pendingPlacements.isEmpty,
-                            canExchange: engine.gameState.tileBag.count >= ScrabbleConstants.rackSize,
-                            isGameOver: engine.gameState.isGameOver,
-                            onSubmit: handleSubmit,
-                            onRecall: {
-                                engine.recallAllTiles()
-                                selectedTile = nil
-                            },
-                            onShuffle: { engine.shuffleRack() },
-                            onPass: { showPassConfirm = true },
-                            onExchange: { showExchange = true }
-                        )
-                    } else if engine.gameState.isGameOver {
-                        gameOverView
-                    } else {
-                        Text("Waiting for opponent...")
-                            .font(.headline)
-                            .foregroundColor(.secondary)
-                            .padding()
+                        if engine.isLocalPlayerTurn {
+                            // Full controls when it's your turn
+                            ControlsView(
+                                hasPendingTiles: !engine.pendingPlacements.isEmpty,
+                                canExchange: engine.gameState.tileBag.count >= ScrabbleConstants.rackSize,
+                                isGameOver: engine.gameState.isGameOver,
+                                onSubmit: handleSubmit,
+                                onRecall: {
+                                    engine.recallAllTiles()
+                                    selectedTile = nil
+                                },
+                                onShuffle: { engine.shuffleRack() },
+                                onPass: { showPassConfirm = true },
+                                onExchange: { showExchange = true }
+                            )
+                        } else {
+                            // Just shuffle when waiting
+                            Button(action: { shuffleLocalPlayerRack() }) {
+                                VStack(spacing: 2) {
+                                    Image(systemName: "shuffle")
+                                    Text("Shuffle")
+                                        .font(.caption2)
+                                }
+                            }
+                            .buttonStyle(.bordered)
+                            .padding(.vertical, 4)
+                        }
                     }
                 }
                 .padding(.top, 4)
@@ -169,6 +186,17 @@ struct GameView: View {
 
     // MARK: - Computed properties
 
+    /// The local player's rack, regardless of whose turn it is
+    private var localPlayerRack: [Tile] {
+        guard let idx = engine.localPlayerIndex else { return engine.currentPlayerRack }
+        return engine.gameState.players[idx].rack
+    }
+
+    /// The player index for the local player's rack
+    private var localPlayerRackIndex: Int {
+        engine.localPlayerIndex ?? engine.gameState.currentPlayerIndex
+    }
+
     private var pendingPositionSet: Set<String> {
         Set(engine.pendingPlacements.map { "\($0.row),\($0.col)" })
     }
@@ -195,10 +223,10 @@ struct GameView: View {
     // MARK: - Unified drag handling
 
     private func tryStartDrag(at location: CGPoint) {
-        guard engine.isLocalPlayerTurn && !engine.gameState.isGameOver else { return }
+        guard !engine.gameState.isGameOver else { return }
 
-        // Check rack tiles first
-        let rack = engine.currentPlayerRack
+        // Check rack tiles — allowed even when waiting for opponent (for reordering)
+        let rack = localPlayerRack
         for (index, frame) in dragState.rackFrames {
             if frame.contains(location) && index < rack.count {
                 let tile = rack[index]
@@ -208,7 +236,8 @@ struct GameView: View {
             }
         }
 
-        // Check pending board tiles
+        // Check pending board tiles — only when it's our turn
+        guard engine.isLocalPlayerTurn else { return }
         for (key, frame) in dragState.boardFrames {
             if frame.contains(location) {
                 let parts = key.split(separator: ",")
@@ -231,10 +260,12 @@ struct GameView: View {
         let source = result.source
         let target = result.target
 
+        let rackIdx = localPlayerRackIndex
+
         switch target {
         case .board(let row, let col):
-            if !engine.gameState.board.isOccupied(row: row, col: col) {
-                // For rack source, the tile is still in the rack — placeTile will remove it
+            // Only allow board drops on our turn
+            if engine.isLocalPlayerTurn && !engine.gameState.board.isOccupied(row: row, col: col) {
                 engine.placeTile(tile, at: row, col: col)
             } else {
                 returnTileToSource(tile: tile, source: source)
@@ -244,22 +275,21 @@ struct GameView: View {
             switch source {
             case .rack(let sourceIndex):
                 // Rearrange within rack
-                var rack = engine.gameState.players[engine.gameState.currentPlayerIndex].rack
+                var rack = engine.gameState.players[rackIdx].rack
                 guard sourceIndex < rack.count else { break }
                 let moved = rack.remove(at: sourceIndex)
                 let insertAt = min(targetIndex, rack.count)
                 rack.insert(moved, at: insertAt)
-                engine.gameState.players[engine.gameState.currentPlayerIndex].rack = rack
+                engine.gameState.players[rackIdx].rack = rack
 
             case .board:
-                // Tile was already removed from board in tryStartDrag and returned to rack
-                // Reposition it within the rack
-                if let currentIndex = engine.currentPlayerRack.firstIndex(where: { $0.id == tile.id }) {
-                    var rack = engine.gameState.players[engine.gameState.currentPlayerIndex].rack
+                // Tile was already removed from board and returned to rack
+                if let currentIndex = engine.gameState.players[rackIdx].rack.firstIndex(where: { $0.id == tile.id }) {
+                    var rack = engine.gameState.players[rackIdx].rack
                     let moved = rack.remove(at: currentIndex)
                     let insertAt = min(targetIndex, rack.count)
                     rack.insert(moved, at: insertAt)
-                    engine.gameState.players[engine.gameState.currentPlayerIndex].rack = rack
+                    engine.gameState.players[rackIdx].rack = rack
                 }
             }
 
@@ -277,6 +307,10 @@ struct GameView: View {
             // Put it back where it was
             engine.placeTile(tile, at: row, col: col)
         }
+    }
+
+    private func shuffleLocalPlayerRack() {
+        engine.gameState.players[localPlayerRackIndex].rack.shuffle()
     }
 
     // MARK: - Tap handling
