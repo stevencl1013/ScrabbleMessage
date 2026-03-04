@@ -13,6 +13,8 @@ targets:
       - ScrabbleMessage
     info:
       path: ScrabbleMessage/Info.plist
+      properties:
+        CFBundlePackageType: APPL
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.scrabble.ScrabbleMessage
       GENERATE_INFOPLIST_FILE: NO
@@ -26,6 +28,11 @@ targets:
       - MessagesExtension
     info:
       path: MessagesExtension/Info.plist
+      properties:
+        CFBundleDisplayName: Scrabble
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.message-payload-provider
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).MessagesViewController
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.scrabble.ScrabbleMessage.MessagesExtension
       GENERATE_INFOPLIST_FILE: NO

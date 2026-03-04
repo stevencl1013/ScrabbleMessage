@@ -5,6 +5,7 @@ struct SquareView: View {
     let row: Int
     let col: Int
     var isPending: Bool = false
+    var isDropTarget: Bool = false
     var size: CGFloat = 24
     var onTap: (() -> Void)?
 
@@ -13,6 +14,11 @@ struct SquareView: View {
             Rectangle()
                 .fill(backgroundColor)
                 .border(Color.black.opacity(0.15), width: 0.5)
+
+            if isDropTarget && square.tile == nil {
+                Rectangle()
+                    .fill(Color.green.opacity(0.35))
+            }
 
             if let tile = square.tile {
                 TileView(tile: tile, isPending: isPending, size: size - 2)
@@ -24,6 +30,14 @@ struct SquareView: View {
             }
         }
         .frame(width: size, height: size)
+        .background(
+            GeometryReader { geo in
+                Color.clear.preference(
+                    key: BoardSquareFrameKey.self,
+                    value: ["\(row),\(col)": geo.frame(in: .named("gameArea"))]
+                )
+            }
+        )
         .onTapGesture {
             onTap?()
         }

@@ -35,6 +35,7 @@
 		B5D68B211F8719401722CB5F /* RackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB566EBA699CC1680FAC231 /* RackView.swift */; };
 		B9B9EEB0D0C8D02BCDF670CE /* BlankPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534A3AC27F9231D4E58B9F5B /* BlankPickerView.swift */; };
 		D108D1B8F74AE0DAEDE92813 /* ScrabbleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71212FB7BAD6F5F2E88EEE74 /* ScrabbleConstants.swift */; };
+		F2A9B9113C3A2C635E2990B9 /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C00AD3D0E5FB9D1D2D9F /* DragState.swift */; };
 		F329B2D264622ACF83DD38CA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22E117B4AEF2CB7F2ABC /* Player.swift */; };
 		FC9DFAE67123A8041BB8F762 /* GameStateCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C41E8B595E9015D85FB2A2 /* GameStateCoder.swift */; };
 		FCB4D562A4A98A3427F0CB3F /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED22A25D24D20DFF29FA3C /* WordDictionary.swift */; };
@@ -72,6 +73,7 @@
 		16B4F72D21EA324B5A3328CE /* MoveValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveValidator.swift; sourceTree = "<group>"; };
 		18021936CDE3BF9511E19352 /* ExchangeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeSheetView.swift; sourceTree = "<group>"; };
 		1EC5D1492EAFAC2894FB351D /* ScrabbleMessage.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ScrabbleMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20B7C00AD3D0E5FB9D1D2D9F /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		2568C7A78BEEEC477B463E9B /* MessageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
 		2A3850183E656ADF76F2C8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36F18D684141B0E7AA4DFF28 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 			path = ScrabbleMessage;
 			sourceTree = "<group>";
 		};
+		AD6110E6476D5897798DD955 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				20B7C00AD3D0E5FB9D1D2D9F /* DragState.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C0277294B5A5A761281B4735 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 				2A3850183E656ADF76F2C8A0 /* Assets.xcassets */,
 				AF8E6C5A4D9D6B78C655308E /* Info.plist */,
 				36F18D684141B0E7AA4DFF28 /* MessagesViewController.swift */,
+				AD6110E6476D5897798DD955 /* Helpers */,
 				72F03FBBC26EC63B637B885F /* Logic */,
 				7C6391D4D734325B6BD24699 /* Models */,
 				8E1296E751FF1B42789C97BC /* Resources */,
@@ -306,6 +317,7 @@
 				70992B172EEBBEBEBECE2BBB /* BoardView.swift in Sources */,
 				7E6FD88D02E582DC674A9E5D /* CompactView.swift in Sources */,
 				0867C8F608C2BB10523B80BD /* ControlsView.swift in Sources */,
+				F2A9B9113C3A2C635E2990B9 /* DragState.swift in Sources */,
 				17D2981F32057DB29481A22A /* ExchangeSheetView.swift in Sources */,
 				979571A6576C680275E15852 /* GameEngine.swift in Sources */,
 				44BD49A74ED35EEDA782AEDE /* GameState.swift in Sources */,
